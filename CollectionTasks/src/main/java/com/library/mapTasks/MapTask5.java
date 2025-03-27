@@ -2,7 +2,7 @@ package com.library.mapTasks;
 import java.util.*;
 public class MapTask5 {
     public static void main(String[] args) {
-        Map<Integer,String> map=new HashMap<>();
+        TreeMap<Integer,String> map=new TreeMap<>();
         map.put(1,"Vasu");
         map.put(6,"Mani");
         map.put(4,"Pranav");
@@ -13,15 +13,12 @@ public class MapTask5 {
         map.put(5,"Praneeth");
         System.out.println(map);
         int low=5,high=15;
-        System.out.println("Key values between "+low+" and "+high+" (inclusive)");
+        System.out.println("\nKey values between "+low+" and "+high);
         for(Map.Entry<Integer,String> e:map.entrySet()){
-            if(e.getKey()>=low && e.getKey()<=high)
+            if(e.getKey()>=low && e.getKey()<high)
                 System.out.println(e.getKey()+":"+e.getValue());
         }
-        System.out.println("Key values between "+low+" and "+high+" (exclusive)");
-        for(Map.Entry<Integer,String> e:map.entrySet()){
-            if(e.getKey()>low && e.getKey()<high)
-                System.out.println(e.getKey()+":"+e.getValue());
-        }
+        System.out.println("\nKey values between "+low+" and "+high);
+        System.out.println(map.subMap(low,high));
     }
 }
