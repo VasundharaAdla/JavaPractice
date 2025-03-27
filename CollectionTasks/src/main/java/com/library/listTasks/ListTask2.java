@@ -1,4 +1,4 @@
-package com.library.ListTasks;
+package com.library.listTasks;
 
 public class ListTask2 {
     public static void main(String[] args) {
