@@ -1,6 +1,5 @@
-package com.library;
+package com.library.ListTasks;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class ListTask1 {
     public static List<Integer> rotateArray(List<Integer> list,int k) {
